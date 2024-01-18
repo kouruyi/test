@@ -1,9 +1,39 @@
-<mxfile host="app.diagrams.net" modified="2024-01-18T03:44:59.647Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" version="22.1.21" etag="wVkrN7rrznt5_EJX_V8j" type="github">
+<mxfile host="app.diagrams.net" modified="2024-01-18T06:05:30.458Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="xmIA7ld79O3Fxv2yerKC" version="22.1.21" type="github">
   <diagram name="第 1 页" id="31IKMO835xw3d1gbN6Fc">
-    <mxGraphModel>
+    <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-8" value="transferState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="280" width="250" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-9" value="+ m_mutex: boost::mutex" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-8">
+          <mxGeometry y="26" width="250" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-10" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-8">
+          <mxGeometry y="52" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-11" value="+ method(type): type&lt;br&gt;+ switchBroken(RBTInstance * ): void&lt;br&gt;&lt;br&gt;+&amp;nbsp;TransferState()&lt;br&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual fetch(RBTInstance * ): TPack ;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual broken(RBTInstance * ) = 0: void;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual readOnce(RBTInstance * ): bool;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-8">
+          <mxGeometry y="60" width="250" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-12" value="IState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="70" width="250" height="144" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-14" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-12">
+          <mxGeometry y="26" width="250" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-15" value="&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ virtual ~IState() {}&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;+ virtual fetch(RBTInstance * ): TPack ;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;+ virtual broken(RBTInstance * ) = 0: void;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;+ virtual readOnce(RBTInstance * ): bool;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;+ virtual writeOnce(RBTInstance * ): bool;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&amp;nbsp;+ virtual loadOnce(RBTInstance * ): bool;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-12">
+          <mxGeometry y="34" width="250" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-16" value="brokenState" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="280" width="300" height="154" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-18" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-16">
+          <mxGeometry y="26" width="300" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="pOmvQ7Z93hueA7WAEKac-19" value="+ method(type): type&lt;br&gt;+ switchBrokenTransferOne(RBTInstance * ): void&lt;br&gt;&lt;br&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual fetch(RBTInstance * ): TPack ;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual broken(RBTInstance * ) = 0: void;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual readOnce(RBTInstance * ): bool;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;+ virtual writeOnce(RBTInstance * ): bool;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="pOmvQ7Z93hueA7WAEKac-16">
+          <mxGeometry y="34" width="300" height="120" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
